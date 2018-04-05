@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<p>16. Write a program on your own use case using either of the following
+	helpers:
+	forEach, map, filter, find, some, every, reduce
+	<script>
+		var num = [1,2,3];
+		var fruit = ["apple",  "banana", "mango"];
+		num.forEach(function (i) {
+			console.log(i);
+		})
+		var num1 = num.map(x => x+2);
+		console.log(num1);
+		var res = fruit.filter(nume => nume.length == 5);
+		console.log(res); 
+		var res1 = fruit.find(x => x.length == 6);
+		console.log(res1);
+		var res2 = num.some(x => x%2 == 0);
+		console.log(res2);
+		var res3 = num.every(x => x/2 == 0);
+		console.log(res3);
+		var res4 = (accumulator, currentValue) => accumulator + currentValue;
+		console.log(num.reduce(res4));
+	</script>
+</p>
+</body>
+</html>

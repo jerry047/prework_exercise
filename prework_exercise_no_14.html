@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js function to humanize number</title>
+</head>
+<body>
+	<p>14. Write a JavaScript function to humanized number (Formats a number to	a human-readable string.) with the correct suffix such as 1st, 2nd, 3rd or 4th.
+	Test Data :
+	console.log(humanize_format());
+	console.log(humanize_format(1));
+	console.log(humanize_format(8));
+	console.log(humanize_format(301));
+	console.log(humanize_format(402));
+	"1st"
+	"8th"
+	"301st"
+	"402nd"</p>
+	<script>
+		function humanize_format(number) {
+        if(number % 100 >= 11 && number % 100 <= 13)
+            return number + "th";
+        
+        switch(number % 10) {
+            case 1: return number + "st";
+            case 2: return number + "nd";
+            case 3: return number + "rd";
+        }
+        
+        return number + "th";
+    }
+	console.log(humanize_format(1));
+	console.log(humanize_format(8));
+	console.log(humanize_format(301));
+	console.log(humanize_format(402));
+	</script>
+</body>
+</html>
+
